@@ -21,6 +21,8 @@ endef
 # Installs the compiled binary into the drone's /usr/bin directory and makes it executable
 define FLUKE_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(@D)/fluke $(TARGET_DIR)/usr/bin/fluke
+	$(INSTALL) -m 644 -t $(TARGET_DIR)/etc $(FLUKE_PKGDIR)/files/fluke.conf
+
 endef
 
 $(eval $(generic-package))
