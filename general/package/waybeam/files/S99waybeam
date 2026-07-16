@@ -1,0 +1,20 @@
+#!/bin/sh
+case "$1" in
+  start)
+    echo "Starting waybeam..."
+    /usr/bin/waybeam > /tmp/waybeam.log 2>&1 &
+    ;;
+  stop)
+    echo "Stopping waybeam..."
+    killall waybeam
+    ;;
+  restart)
+    $0 stop
+    sleep 1
+    $0 start
+    ;;
+  *)
+    echo "Usage: $0 {start|stop|restart}"
+    exit 1
+esac
+exit 0
