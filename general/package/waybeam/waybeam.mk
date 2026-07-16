@@ -5,7 +5,7 @@
 ################################################################################
 
 # Replace with the actual commit hash or release tag and Github user/repo
-WAYBEAM_VERSION = HEAD
+WAYBEAM_VERSION = 18e304cb7da28358cd812e4269eea134263e67bf
 WAYBEAM_SITE = $(call github,OpenIPC,waybeam_venc,$(WAYBEAM_VERSION))
 WAYBEAM_LICENSE = GPL-3.0 # Update with actual license
 
