@@ -1,0 +1,4 @@
+config BR2_PACKAGE_WAYBEAM
+	bool "Waybeam"
+	help
+	  Streamer for sigmastar star6e and 6c
