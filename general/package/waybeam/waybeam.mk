@@ -28,6 +28,8 @@ define WAYBEAM_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 755 -d $(TARGET_DIR)/usr/bin
 	$(INSTALL) -m 755 -t $(TARGET_DIR)/usr/bin $(@D)/out/$(WAYBEAM_SOC)/waybeam
   $(INSTALL) -m 644 -t $(TARGET_DIR)/etc/ $(WAYBEAM_PKGDIR)/files/waybeam.json
+	$(INSTALL) -m 755 -d $(TARGET_DIR)/etc/init.d
+	$(INSTALL) -m 755 -t $(TARGET_DIR)/etc/init.d $(WAYBEAM_PKGDIR)/files/S99waybeam
 	$(INSTALL) -m 755 -t $(TARGET_DIR)/usr/bin $(@D)/out/$(WAYBEAM_SOC)/json_cli
 	$(INSTALL) -m 755 -t $(TARGET_DIR)/usr/bin $(@D)/out/$(WAYBEAM_SOC)/regscan
 endef
