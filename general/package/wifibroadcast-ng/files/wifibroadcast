@@ -198,7 +198,7 @@ start_telemetry() {
         if [ "$router" = "msposd" ]; then
             size=$(curl -s localhost/api/v1/config.json | jsonfilter -qe "@.video0.size")
         fi
-        msposd -b 115200 -c 11 -r "$osd_fps" -m /dev/"$serial" -d  > /dev/null &
+        msposd -b 115200 -r "$osd_fps" -m /dev/"$serial" -d  > /dev/null &
 
         sleep 5
         echo "&L70&F28&G8CPU:&C TEMP:&T\n&B" >/tmp/MSPOSD.msg
